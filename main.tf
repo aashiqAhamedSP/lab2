@@ -6,7 +6,14 @@ provider "azurerm" {
   client_secret   = var.clcr
   tenant_id       = var.tnid
 }
-
+terraform {
+    backend "azurerm" {
+        resource_group_name = var.terra_rg
+        storage_account_name = var.trstrgname
+        container_name = "terraform"
+        key = "terraform.tfstate"
+    }
+}
 resource "azurerm_resource_group" "jenkins_rg" {
   name     = "lab2rg"
   location = "eastus"
