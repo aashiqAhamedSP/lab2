@@ -1,0 +1,8 @@
+---
+- hosts: remotehosts
+  become: true
+  tasks:
+  - name: install mysql in mysqlvm
+    apt:
+      name : mysql-server
+      state: present
