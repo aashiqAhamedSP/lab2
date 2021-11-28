@@ -19,10 +19,3 @@ variable "ansssh" {
   type = string
 }
 
-variable "terra_rg" {
-  type = string
-}
-
-variable "trstrgname" {
-  type = string
-}
