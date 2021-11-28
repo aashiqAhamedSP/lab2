@@ -1,8 +1,0 @@
----
-- hosts: remotehosts
-  become: true
-  tasks:
-  - name: install docker
-    apt:
-      name : mysql-server
-      state: present
