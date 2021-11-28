@@ -8,8 +8,8 @@ provider "azurerm" {
 }
 terraform {
     backend "azurerm" {
-        resource_group_name = var.terra_rg
-        storage_account_name = var.trstrgname
+        resource_group_name = "terraformrg"
+        storage_account_name = "terraformstorageaccoun"
         container_name = "terraform"
         key = "terraform.tfstate"
     }
